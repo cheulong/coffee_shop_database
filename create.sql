@@ -24,3 +24,10 @@ ALTER TABLE employees
 ADD FOREIGN KEY (coffeeshop_id)
 REFERENCES shops(coffeeshop_id)
 ON DELETE SET NULL;
+
+-- Create locations table
+CREATE TABLE locations (
+    city_id INT PRIMARY KEY,
+    city VARCHAR(50),
+    country VARCHAR(50)   
+);
