@@ -31,3 +31,9 @@ CREATE TABLE locations (
     city VARCHAR(50),
     country VARCHAR(50)   
 );
+
+-- Add foreign key to shops table
+ALTER TABLE shops
+ADD FOREIGN KEY (city_id)
+REFERENCES locations(city_id)
+ON DELETE SET NULL;
