@@ -37,3 +37,13 @@ ALTER TABLE shops
 ADD FOREIGN KEY (city_id)
 REFERENCES locations(city_id)
 ON DELETE SET NULL;
+
+-- Create suppliers table
+CREATE TABLE suppliers (
+    coffeeshop_id INT,
+    supplier_name VARCHAR(40),
+    coffee_type VARCHAR(20),
+    PRIMARY KEY (coffeeshop_id, supplier_name),
+    FOREIGN KEY (coffeeshop_id) REFERENCES shops(coffeeshop_id)
+    ON DELETE CASCADE
+);
