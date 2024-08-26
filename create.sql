@@ -18,3 +18,9 @@ CREATE TABLE shops (
     coffeeshop_name VARCHAR(50),
     city_id INT
 );
+
+-- Add foreign key to the employees table
+ALTER TABLE employees
+ADD FOREIGN KEY (coffeeshop_id)
+REFERENCES shops(coffeeshop_id)
+ON DELETE SET NULL;
